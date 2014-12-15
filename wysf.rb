@@ -39,7 +39,7 @@ module Wysf
       p data
 
       seconds = data[1].to_i / 1000
-      readable_time = Time.at(seconds).strftime("%H:%M:%S:%L")
+      readable_time = Time.at(seconds).strftime("%H:%M:%S")
 
       Wysf::DataEntity.new(data[0], readable_time, data[2])
     end

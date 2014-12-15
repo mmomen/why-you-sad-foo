@@ -7,9 +7,9 @@ var value = function() {
 
 var redirectURL = "/done";
 
-var form = $('<form action="' + redirectURL + '" method="post">' + '<div class="submitting">' + '<input type="submit" id="theClick">' + '</div>');
+var form = $('<form action="' + redirectURL + '" method="post">' + '<div class="submitting">' + '<input type="submit" id="theClick" value="I ain\'t sad no mo" class="button radius">' + '</div>');
 
-$('body').append(form);
+$('.row').append(form);
 
 $("#theClick").on("click", function() {
   var hiddenAttr = $('<input type="hidden" name="elapsed_time" value="' + value() + '"></input>');
