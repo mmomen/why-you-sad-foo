@@ -1,5 +1,5 @@
-var imageLinks = new Array;
-var imageObjects = new Array;
+var imageLinks = [];
+var imageObjects = [];
 
 var getImages = function(){
   $.ajax({
@@ -10,16 +10,16 @@ var getImages = function(){
         xhr.setRequestHeader('Authorization', 'Client-ID '+ apiKey);
       },
       success: function(data) {
-        imageObjects = data.data
+        imageObjects = data.data;
       }
     });
 };
 
 var filterLinks = function(){
   for (var i = 0; i < imageObjects.length; i++) {
-    var image = imageObjects[i].link
+    var image = imageObjects[i].link;
     if (imageObjects[i].animated === false) {
-      imageLinks.push(image)
+      imageLinks.push(image);
     }
-  };
+  }
 };
