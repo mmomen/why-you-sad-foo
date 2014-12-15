@@ -18,5 +18,13 @@ post '/done' do
 
   @data = Wysf::DataRepo.insert_time(@click_time, @img_count)
 
+  redirect to("/stats/#{@data.id}") #prevents reinserting the same data on refresh
+end
+
+get '/stats/:id' do
+  @id = params[:id]
+  @data = Wysf::DataRepo.get_click_time(@id)
+  @avg = Wysf::DataRepo.get_average_time
+  
   erb :stats
 end
