@@ -1,15 +1,107 @@
-
-.top-bar{
-  height: 3.2rem;
-  
+.app-bar {
+  background-color:   #FEFEFD;
 }
-
-.top-bar .name h1{
-  font-size:2.0rem;
+.app-bar h1 {
+  font-size: 2.2em;
   font-family: 'Finger Paint', cursive;
 }
-
-.fadein {
-  width: 50%;
-  height: auto;
+.app-bar button {
+  margin: 0;
 }
+.row.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.row.full-width img{
+  height: 34em;
+  width:100%;
+  opacity:0.8;
+}
+
+.button-width{
+  width:100%;
+}
+
+.button{
+  background-color: black;
+  font-family: 'Finger Paint', cursive;
+  font-size:1.5em;
+}
+
+.panel{
+  opacity:.8;
+}
+
+.picture-buffer{
+  background-color:   #FF9900;
+  padding-top: 1.0em;
+  opacity:0.2;  
+}
+
+.content{
+  margin-top: 3em;
+  width:70%;
+  margin-bottom:3em;
+}
+
+
+.row.full-width img{
+  height: 20em;
+}
+
+.row.full-width.header-image img{
+  height:34em;
+}
+
+body{
+  background-color: #FEFEFD;
+}
+
+hr{
+  width: 90%;
+  margin:auto;
+  margin-bottom:2em;
+}
+
+.graphs{
+  margin-bottom:3em;
+}
+
+
+.happy-button{
+  margin-bottom: 2em;
+}
+
+.frown{
+  margin-top:0.3em;
+}
+.pics{
+  margin-bottom: 3em;
+}
+
+.bottom-info{
+  margin-top:7em;
+  background-color: #FF9900;
+  opacity: .5;
+}
+
+
+.panel{
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.foot{
+  padding: .5em 0 .5em 0;
+  background-color: black;
+  color:white;
+  text-align: right;
+  font-size:1em;
+}
+
+.foot p{
+  margin-top:3em;
+}
+
+

@@ -2,4 +2,3 @@
 vendor/bundle
 .DS_store
 public/js/apiKey.js
-public/images

@@ -9,27 +9,159 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
   <script src="vendor/js/jquery-2.1.1.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>   
+  <script src="js/animation.js"></script>
+  <!-- 
+      <style>
+
+      .wrapper {
+        margin:auto;
+        width: 80em;
+        margin-top: 10em;
+      }
+
+      .wrapper p{
+        display:none;
+        font-family: 'Finger Paint', cursive;
+        float:left;
+        width: 25%;
+        font-size: 5em;
+        text-align: center;
+      }   
+      
+      .kerrigan{
+        display:none;
+      }
+
+    </style> 
+ 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>    
+  
+    <script>
+
+      $(window).load(function() {
+        $(".wrapper").delay(2000).animate({
+          opacity:0
+        }, 1000);
+      });
+
+      setTimeout(function(){
+        $(".wrapper").remove();
+      }, 3400)
+
+     $(document).ready(function() { 
+        $('.word').each(function(i) {
+          $(this).delay(i * 450).fadeIn(700);
+        });
+     });
+
+     $(document).ready(function(){
+        $('.kerrigan').delay(3100).fadeIn(600);
+     })
+
+    </script>
+     -->
+      
 </head>
 
 <body>
-  
-  <!-- DIV consisting of two test images -->
-  <div class="fadein">
-    <img src="images/load.jpg">
-    <img src="images/test.jpg">
-  </div>
-  
-  <br>
-  <br>
+        
+<!--   <div class="wrapper">
+    <p class="word">Why</p>
+    <p class="word">You</p>
+    <p class="word">Sad</p>
+    <p class="word">Foo?</p>
+  </div> -->
 
-  <div class="row">
-  </div>
+  <div class = "kerrigan">
 
+    <div class="row full-width app-bar">
+      <div class="text-left small-4 medium-2 columns header">
+        <p></p>
+      </div>
+      <div class="small-4 medium-8 columns block-grid header">
+        <h1 class="text-center">Why You Sad Foo?</h1>
+      </div>
+      <div class="text-right small-4 medium-2 columns header">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="row full-width header-image">
+      <img src="public/image/header-picture.jpg" alt="header-picture">
+    </div>
+
+    <div class="row full-width picture-buffer">
+      <span></span>
+    </div>
+
+    <div class="row content">
+      <div class="columns small-12">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, adipisci. Quia dolor, vitae amet a suscipit facere consectetur commodi! Harum soluta earum a repellendus sequi delectus quam quas, ut assumenda quidem, ducimus nisi, ab ad odio adipisci necessitatibus. Libero aliquid quaerat asperiores autem sequi beatae.<br><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, incidunt, perferendis. Libero ratione consequatur, minus veritatis et. Eius non provident porro. Nobis aut quia fugiat, odit id ex cumque, nisi quae delectus molestias, ad dolores!</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row graphs">
+      <div class="columns small-6">
+        <img src="public/image/graph1.jpg" alt="">
+      </div>
+      <div class="columns small-6">
+        <h2>Lorem ipsum dolor sit amet.</h2><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate expedita sequi esse magnam iste animi hic modi unde veritatis est, consequuntur iusto, nam officia voluptates! Mollitia tenetur beatae quos corporis, tempore aliquid inventore repellat quaerat.</p>
+      </div>
+    </div>
+
+     <hr>
+
+    <div class="row full-width pics">
+      <div class="columns small-3"><p></p></div>
+      <div class="columns small-3 frown"><img src="public/image/frown.png" alt="" height= "50px" width="50px"></div>
+      <div class="columns small-3 smile"><img src="public/image/smile.png" alt="" height="5em" width ="5em"></div>
+      <div class="columns small-3"><p></p></div>
+    </div>
+    
+
+    <div class="row happy-button">
+      <div class="columns small-4">
+        <p></p>
+      </div>
+      <div class="columns small-4">
+      <form action="">
+        <input type="submit" value = "Get Happy &roarr;" class = "button radius button-width">
+      </form>
+      </div>
+      <div class="columns small-4">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="row full-width bottom-info">
+      <div class="columns small-6">
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam reprehenderit cumque asperiores impedit ut neque molestiae quia? Expedita, enim provident.</p>
+        </div>
+      </div>
+      <div class="columns small-6">
+        <div class="panel">
+          <p>Nulla repellendus recusandae temporibus fugiat ducimus. Incidunt, odio reprehenderit ut reiciendis obcaecati eligendi sapiente, dolores illum porro nisi perferendis, ullam.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row full-width foot">
+      <div class="columns small-12"><p>tae/mazdak/kenny production</p></div>
+    </div>
+
+  </div>
 </body>
 
-<script src="js/apiKey.js"></script>
-<script src="js/imgurAPI.js"></script>
-<script src="js/main.js"></script>
 <script src="js/buttonExec.js"></script>
+<script src="js/imgurAPI.js"></script>
+<script src="js/apiKey.js"></script>
+<script src="js/main.js"></script>
 
 </html>
