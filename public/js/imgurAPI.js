@@ -1,4 +1,4 @@
-var imageLinks = new Arrray;
+var imageLinks = new Array;
 var imageObjects = new Array;
 
 var getImages = function(){
@@ -7,7 +7,7 @@ var getImages = function(){
       url: "https://api.imgur.com/3/gallery/r/aww.json",
       dataType: "json",
       beforeSend: function(xhr) {
-        xhr.setRequestHeader('Authorization', 'Client-ID '+ apiKey +'');
+        xhr.setRequestHeader('Authorization', 'Client-ID '+ apiKey);
       },
       success: function(data) {
         imageObjects = data.data
