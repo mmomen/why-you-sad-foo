@@ -8,23 +8,43 @@
     <!--<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/foundation/5.4.7/css/foundation.min.css">-->
     <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
     <style type="text/css">
+      body{
+        background-image: url(image/sativa.png);
+        background-repeat: repeat;
+      }
+
+      img {
+        margin-left: 50px;
+      }
+      .button {
+        padding: 20px;
+      }
       .main{
-        min-height: 720px;
-        max-height: 100%;
-        width: 70%;
+        min-height: 700px;
+        max-height: 700px;
+        max-width: 700px;
         margin: auto;
-      };
+        background-color: rgba(256, 256, 256, .6);
+        overflow: hidden;
+      }
+      .fadein {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        margin: auto;
+      }
     </style>
   </head>
 
   <body>
+
     <div class="main">
+      <div class="button">
+      </div>
+
       <div class="fadein">
           <!-- IMGs go here -->
       </div>
-    </div>
-    
-    <div class="button">
     </div>
   
     <script src="vendor/js/jquery-2.1.1.js"></script>

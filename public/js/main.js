@@ -28,7 +28,7 @@ var revealImage = function(array){
     imageCount += 1;
     imageNum += 1;
     if (imageCount === array.length){imageNum = 0};
-  }, 2000)
+  }, 3000)
 };
 
 API.getImages(function(data){
