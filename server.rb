@@ -25,13 +25,21 @@ get '/stats/:id' do
   @id = params[:id]
   @data = Wysf::DataRepo.get_click_time(@id)
   @avg = Wysf::DataRepo.get_average_time
-  @test = Wysf::DataRepo.get_all
-  @test2 = @test.map do |time|
-    (time/1000).round
-  end
 
   erb :stats
 end
+
+
+get '/stats/all' do
+  @all_times = Wysf::DataRepo.get_all
+  @all_seconds = @all_times.map do |time|
+    (time/1000).round
+  end
+
+  json :foo => bar
+  
+end
+
 
 get '/display.html' do
   send_file "display.html"
