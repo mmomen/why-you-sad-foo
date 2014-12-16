@@ -1,5 +1,6 @@
 var imageObjects = [];
 var imageLinks = [];
+var imageCount = 0;
 
 var filterLinks = function(array){
   for (var i = 0; i < array.length; i++) {
@@ -20,12 +21,13 @@ var appendImages = function(array){
 };
 
 var revealImage = function(array){
-  imageCount = 0;
+  var imageNum = 0;
   setInterval(function(){
     $('.fadein [data-index='+imageCount+']').hide();
     $('.fadein [data-index='+(imageCount+1)+']').fadeIn(300);
     imageCount += 1;
-    if (imageCount === array.length){imageCount = 0};
+    imageNum += 1;
+    if (imageCount === array.length){imageNum = 0};
   }, 2000)
 };
 
