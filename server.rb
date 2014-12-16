@@ -25,6 +25,10 @@ get '/stats/:id' do
   @id = params[:id]
   @data = Wysf::DataRepo.get_click_time(@id)
   @avg = Wysf::DataRepo.get_average_time
-  
+
   erb :stats
+end
+
+get '/display.html' do
+  send_file "display.html"
 end
