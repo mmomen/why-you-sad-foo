@@ -3,12 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>CONGRATS</title>
+
+  <script>
+
+  </script>
+
+  <style>
+
+    #paper{
+      margin:auto;
+      width:1000px;
+      height:1000px;
+    }
+
+  </style>
+
+
+
 </head>
 <body>
   <h1>CONGRATULATIONS ON YOUR NEW FOUND HAPPINESS!</h1>
   <p>Time to happiness: <%= @data.click_time %></p>
   <p>Images till happiness: <%= @data.img_count %></p>
   <p>Average time until the happy: <%= @avg %></p>
-  <script type="text/javascript"></script>
+
+
+
+  <div id="paper"></div>
+
+
+   <script src="../vendor/bundle/raphael/raphael.js"></script>
+   <script src="../vendor/bundle/raphael/g.raphael.js"></script>
+   <script src="../vendor/bundle/raphael/g.bar.js"></script>
+   <script src ="../public/js/michelangelo.js"></script>
+
 </body>
 </html>

@@ -3,7 +3,7 @@ require 'sinatra/json'
 require "sinatra/reloader"
 require 'pry-byebug'
 
-require_relative 'wysf.rb'
+require_relative 'lib/wysf_helper.rb'
 
 set :bind, '0.0.0.0'
 set :port, 10101
@@ -25,6 +25,10 @@ get '/stats/:id' do
   @id = params[:id]
   @data = Wysf::DataRepo.get_click_time(@id)
   @avg = Wysf::DataRepo.get_average_time
+  @test = Wysf::DataRepo.get_all
+  @test2 = @test.map do |time|
+    (time/1000).round
+  end
 
   erb :stats
 end
