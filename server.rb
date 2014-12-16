@@ -1,12 +1,12 @@
 require 'sinatra'
 require 'sinatra/json'
 require "sinatra/reloader"
-require 'pry-byebug'
+require 'pry-byebug' if development?
 
 require_relative 'lib/wysf_helper.rb'
 
-set :bind, '0.0.0.0'
-set :port, 10101
+set :bind, '0.0.0.0' if development?
+set :port, 10101 if development?
 
 get '/' do
   send_file "index.html"

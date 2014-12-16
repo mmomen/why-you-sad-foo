@@ -3,7 +3,16 @@ require 'pg'
 module Wysf
 
   class DataRepo
-    @@db = PG.connect(dbname: 'wysf-db')
+    if ENV['DATABASE_URL'].nil?
+      @@db = PG.connect(dbname: 'wysf-db')
+    else
+      db_parts = ENV['DATABASE_URL'].split(/\/|:|@/)
+      username = db_parts[3]
+      password = db_parts[4]
+      host = db_parts[5]
+      wdb = db_parts[7]
+      @@db = PG.connect(host: host, dbname: wdb, user: username, password: password)
+    end
 
     def self.create_table
       command = <<-SQL
