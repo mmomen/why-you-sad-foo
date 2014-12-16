@@ -1,9 +1,9 @@
 /*ANIMATION*/
 
-/*.wrapper {
+.wrapper {
   margin:auto;
   width: 80em;
-  margin-top: 10em;
+  margin-top: 14em;
 }
 
 .wrapper p{
@@ -17,18 +17,32 @@
 
 .kerrigan{
   display:none;
-}*/
+}
 
 
 
-/*#######*/
+/*STICKY NAV BAR*/
+
+.sticky {
+  position:fixed;
+  width:100%;
+  left:0;
+  right:0;
+  z-index:100;
+  border-top:0;
+  opacity: 0.4;
+}
+
+
+
 /*GENERAL*/
-/*#######*/
+
 
 /*ALL FULL-WIDTH TAKES 100% SCREEN*/
 .row.full-width {
   width: 100%;
   max-width: 100%;
+  background-color: #FEFEFD
 }
 
 
@@ -97,7 +111,7 @@ body{
 }
 
 .frown{
-  margin-top:0.3em;
+  margin-top:0.23em;
 }
 .pics{
   margin-bottom: 3em;
