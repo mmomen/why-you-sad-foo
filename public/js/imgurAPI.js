@@ -1,25 +1,18 @@
-var imageLinks = [];
-var imageObjects = [];
+var API = (function(){
 
-var getImages = function(){
-  $.ajax({
-      type: "GET",
-      url: "https://api.imgur.com/3/gallery/r/aww.json",
-      dataType: "json",
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader('Authorization', 'Client-ID '+ apiKey);
-      },
-      success: function(data) {
-        imageObjects = data.data;
-      }
-    });
-};
+  var getImages = function(callback){
+    $.ajax({
+        type: "GET",
+        url: "https://api.imgur.com/3/gallery/r/aww.json",
+        dataType: "json",
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader('Authorization', 'Client-ID '+ apiKey);
+        },
+        success: callback
+      });
+  };
 
-var filterLinks = function(){
-  for (var i = 0; i < imageObjects.length; i++) {
-    var image = imageObjects[i].link;
-    if (imageObjects[i].animated === false) {
-      imageLinks.push(image);
-    }
+  return {
+    getImages: getImages,
   }
-};
+})();
