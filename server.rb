@@ -12,6 +12,10 @@ get '/' do
   send_file "index.html"
 end
 
+get '/display.html' do
+  erb :display
+end
+
 post '/done' do
   @click_time = params[:elapsed_time]
   @img_count = params[:image_count]
