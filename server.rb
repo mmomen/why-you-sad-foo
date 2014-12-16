@@ -14,7 +14,7 @@ end
 
 post '/done' do
   @click_time = params[:elapsed_time]
-  @img_count = 0
+  @img_count = params[:image_count]
 
   @data = Wysf::DataRepo.insert_time(@click_time, @img_count)
 

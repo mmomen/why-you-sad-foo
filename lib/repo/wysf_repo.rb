@@ -26,7 +26,7 @@ module Wysf
       RETURNING *;
       SQL
 
-      result = @@db.exec(command);
+      result = @@db.exec(command)
       data = result.values[0]
 
       seconds = data[1].to_i / 1000

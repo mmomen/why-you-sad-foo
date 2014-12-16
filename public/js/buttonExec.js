@@ -13,5 +13,7 @@ $('.button').append(form);
 
 $("#theClick").on("click", function() {
   var hiddenAttr = $('<input type="hidden" name="elapsed_time" value="' + value() + '"></input>');
+  var hiddenImageCount = $('<input type="hidden" name="image_count" value="' + imageCount + '"></input>');
   $(".submitting").append(hiddenAttr);
+  $(".submitting").append(hiddenImageCount);
 });
