@@ -1,24 +1,62 @@
-.app-bar {
-  background-color:   #FEFEFD;
+/*ANIMATION*/
+
+/*.wrapper {
+  margin:auto;
+  width: 80em;
+  margin-top: 10em;
 }
-.app-bar h1 {
-  font-size: 2.2em;
+
+.wrapper p{
+  display:none;
   font-family: 'Finger Paint', cursive;
-}
-.app-bar button {
-  margin: 0;
-}
+  float:left;
+  width: 25%;
+  font-size: 5em;
+  text-align: center;
+}   
+
+.kerrigan{
+  display:none;
+}*/
+
+
+
+/*#######*/
+/*GENERAL*/
+/*#######*/
+
+/*ALL FULL-WIDTH TAKES 100% SCREEN*/
 .row.full-width {
   width: 100%;
   max-width: 100%;
 }
 
-.row.full-width img{
-  height: 34em;
-  width:100%;
-  opacity:0.8;
+
+/*PANEL*/
+
+body{
+  background-color: #FEFEFD;
 }
 
+.panel{
+  opacity:.85;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+
+/*HEADER*/
+
+
+.app-bar h1 {
+  font-size: 3em;
+  font-family: 'Finger Paint', cursive;
+  padding:0.3em;
+}
+
+
+
+/*BUTTON*/
 .button-width{
   width:100%;
 }
@@ -29,48 +67,33 @@
   font-size:1.5em;
 }
 
-.panel{
-  opacity:.8;
+.start-button{
+  margin-bottom: 7em;
 }
+
+
+/*PICTURE BUFFER*/
 
 .picture-buffer{
   background-color:   #FF9900;
   padding-top: 1.0em;
-  opacity:0.2;  
+  opacity:0.2;
+  margin-bottom: 7em;  
 }
+
+
+/*INTRODCUTORY CONTENT*/
 
 .content{
-  margin-top: 3em;
   width:70%;
-  margin-bottom:3em;
+  margin-bottom:7em;
 }
 
-
+/*SMILE VS FROWN PICS*/
 .row.full-width img{
+  width:100%;
+  opacity:0.8;
   height: 20em;
-}
-
-.row.full-width.header-image img{
-  height:34em;
-}
-
-body{
-  background-color: #FEFEFD;
-}
-
-hr{
-  width: 90%;
-  margin:auto;
-  margin-bottom:2em;
-}
-
-.graphs{
-  margin-bottom:3em;
-}
-
-
-.happy-button{
-  margin-bottom: 2em;
 }
 
 .frown{
@@ -80,28 +103,47 @@ hr{
   margin-bottom: 3em;
 }
 
+
+/*HEADER IMAGE*/
+/*DO NOT MOVE UP HAS TO BE BELOW SMILE VS FROM PICS*/
+.row.full-width.header-image img{
+  height:35.5em;
+}
+
+
+/*LINE BREAKER*/
+hr{
+  width: 90%;
+  margin:auto;
+  margin-bottom:7em;
+}
+
+
+/*GRAPHS*/
+.graphs{
+  margin-bottom:7em;
+}
+
+
+
+/*BOTTOM INFORMATION*/
 .bottom-info{
-  margin-top:7em;
-  background-color: #FF9900;
-  opacity: .5;
+  padding:1.3em;
+  background-color: #FFB84D;
+  opacity: .6;
 }
 
 
-.panel{
-  margin-top:1em;
-  margin-bottom:1em;
-}
-
+/*FOOTER*/
 .foot{
-  padding: .5em 0 .5em 0;
   background-color: black;
   color:white;
   text-align: right;
-  font-size:1em;
 }
 
 .foot p{
-  margin-top:3em;
+  font-size:0.7em;
+  margin-top:4em;
 }
 
 
