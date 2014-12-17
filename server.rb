@@ -25,6 +25,18 @@ post '/done' do
   redirect to("/stats/#{@data.id}") #prevents reinserting the same data on refresh
 end
 
+get '/stats/all' do
+  @all_times = Wysf::DataRepo.get_all
+  @all_seconds = @all_times.map do |time|
+    (time/1000).round
+  end
+  @all_seconds = @all_seconds.sort
+
+  json @all_seconds
+
+end
+
+
 get '/stats/:id' do
   @id = params[:id]
   @data = Wysf::DataRepo.get_click_time(@id)
@@ -34,17 +46,7 @@ get '/stats/:id' do
 end
 
 
-get '/stats/all' do
-  @all_times = Wysf::DataRepo.get_all
-  @all_seconds = @all_times.map do |time|
-    (time/1000).round
-  end
-
-  json :foo => bar
-  
-end
-
-
 get '/display.html' do
   send_file "display.html"
 end
+
